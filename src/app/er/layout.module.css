@@ -1,0 +1,68 @@
+.main-layout {
+    height: 100%;
+    position: relative;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.ad-left {
+    position: absolute;
+    top: 391px;
+    text-align: right;
+    height: 600px;
+    left: 10px;
+    overflow: hidden;
+}
+
+.ad-right {
+    position: absolute;
+    top: 391px;
+    text-align: left;
+    left: auto;
+    right: 10px;
+    height: 600px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1430px) {
+    .ad-left {
+        display: inline-block;
+    }
+
+    .ad-right {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .ad-left {
+        width: 160px;
+    }
+
+    .ad-right {
+        width: 160px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .ad-left {
+        width: 300px;
+    }
+
+    .ad-right {
+        width: 300px;
+    }
+}

@@ -1,0 +1,149 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.container-section {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 40px;
+}
+
+.container-section > strong {
+    line-height: 19px;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.container-section > div {
+    background-image: url(//cdn.dak.gg/er/images/bg/bg-banner-route.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.container-section > div > img {
+    max-width: 100px;
+    display: none;
+    margin-right: 16px;
+}
+
+.container-section > div > div {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-section > div > div > p {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    line-height: 1;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.container-section > div > div > p > strong {
+    --tw-text-opacity: 1;
+    color: rgb(224 149 0 / var(--tw-text-opacity));
+}
+
+.container-section > div > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-size: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(224 149 0 / var(--tw-bg-opacity));
+    border-radius: 4px;
+    column-gap: 6px;
+    width: 100%;
+    height: 32px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .container-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container-section > div > img {
+        display: block;
+    }
+
+    .container-section > div > div {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .container-section > div > img {
+        max-width: 100%;
+        margin-right: 50px;
+    }
+
+    .container-section > div > div > p {
+        font-size: 24px;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    .container-section > div > div > a {
+        font-size: 16px;
+        width: auto;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1080px;
+    }
+}

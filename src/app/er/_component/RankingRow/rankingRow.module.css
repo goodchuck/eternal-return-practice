@@ -1,0 +1,103 @@
+.rankingRow-tr {
+    height: 65px;
+}
+
+.rankingRow-td {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    text-align: center;
+    padding: 8px;
+}
+
+.playerWrapper {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    display: flex;
+    align-items: center;
+}
+
+.playerWrapper > div {
+    margin-right: 4px;
+    height: 36px;
+    max-height: 28px;
+    width: 36px;
+    max-width: 28px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(214 214 214 / var(--tw-bg-opacity));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerWrapper > a {
+    font-weight: 500;
+    text-align: left;
+}
+
+.tierWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    -moz-column-gap: 8px;
+}
+
+.tierWrapper > img {
+    border-radius: 9999px;
+    max-width: 100%;
+    height: auto;
+}
+
+.RP {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    font-weight: 700;
+    text-align: center;
+    padding: 8px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.mostWrapper {
+    line-height: 12px;
+    font-size: 11px;
+    justify-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+}
+
+.mostWrapper > li {
+    --tw-text-opacity: 1;
+    color: rgb(100 100 100 / var(--tw-text-opacity));
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.mostWrapper > li > div {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    --tw-bg-opacity: 1;
+    background-color: rgb(214 214 214 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    .playerWrapper > div {
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 8px;
+    }
+
+    .mostWrapper > li > div {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

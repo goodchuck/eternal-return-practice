@@ -1,0 +1,121 @@
+.container {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+
+    --tw-border-opacity: 1;
+    border-color: rgb(230 230 230 / var(--tw-border-opacity));
+
+    border-width: 1px;
+    list-style: none;
+}
+
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 8px;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.link > div {
+    margin-right: 16px;
+    position: relative;
+}
+
+.chaProfile {
+    height: 36px;
+    max-height: 28px;
+    width: 36px;
+    max-width: 28px;
+    overflow: hidden;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(214 214 214 / var(--tw-bg-opacity));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weaponProfile {
+    height: 16px;
+    padding: 2px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(50 50 50 / var(--tw-bg-opacity));
+
+    border-radius: 9999px;
+    display: flex;
+    right: -8px;
+    bottom: 0;
+    position: absolute;
+}
+
+.chaRoutes {
+    display: flex;
+    width: 100%;
+    column-gap: 4px;
+    -moz-column-gap: 4px;
+}
+
+.routeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 51px;
+    height: 32px;
+    background: url("//cdn.dak.gg/er/images/item/ico-itemgradebg-04.svg")
+        no-repeat center/100%;
+}
+
+.routeBox-Img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+@media screen and (min-width: 576px) {
+    .link {
+        row-gap: 0;
+    }
+
+    .chaRoutes {
+        margin-left: auto;
+        width: auto;
+        justify-content: flex-end;
+        -moz-column-gap: 8px;
+        column-gap: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .link {
+        row-gap: 0;
+    }
+    .chaProfile {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .link {
+        row-gap: 8px;
+    }
+
+    .chaRoutes {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .link {
+        row-gap: 0;
+        padding: 16px;
+        padding-right: 24px;
+    }
+
+    .chaRoutes {
+        width: auto;
+    }
+}

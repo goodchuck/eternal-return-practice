@@ -1,12 +1,19 @@
+"use client"
 import Image from 'next/image';
 import styles from './rankingRow.module.css';
 import Link from 'next/link';
 
-export default function RankingRow() {
+type Props = {
+    data: any;
+}
+
+export default function RankingRow({ data }: Props) {
+    let userNum = data.userNum;
+
     return (
         <tr className={styles['rankingRow-tr']}>
             {/* 랭크 */}
-            <td className={styles['rankingRow-td']}>1</td>
+            <td className={styles['rankingRow-td']}>{data.rank}</td>
 
             {/* 플레이어 */}
             <td className={styles['rankingRow-td']}>
@@ -15,7 +22,7 @@ export default function RankingRow() {
                         <Image src={'https://cdn.dak.gg/assets/er/game-assets/1.10.0/CharProfile_Shoichi_S000.png'} width={36} height={36} alt='1'></Image>
                     </div>
                     <Link href={'https://dak.gg/er/players/%EA%B9%80%ED%95%B4%EC%82%AC%EB%8A%94%EA%B7%B8%EB%82%A8%EC%9E%90'}>
-                        김해사는그남자
+                        {data.nickname}
                     </Link>
                 </div>
             </td>
@@ -29,7 +36,7 @@ export default function RankingRow() {
             </td>
 
             {/* RP */}
-            <td className={`${styles['rankingRow-td']} ${styles['RP']}`}>1206 RP</td>
+            <td className={`${styles['rankingRow-td']} ${styles['RP']}`}>{data.mmr - 6000} RP</td>
 
             {/* 평균 순위 */}
             <td className={styles['rankingRow-td']}>#4.0</td>

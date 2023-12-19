@@ -1,6 +1,9 @@
+"use client"
+import { useQuery } from "@tanstack/react-query"
 import RankingRow from "../RankingRow/RankingRow"
 import styles from "./rankingTable.module.css"
 import Link from "next/link"
+import { getRankingTop } from "@/api/ranking/api"
 export default function RankingTable() {
     const thead: { width?: string, className?: string, text: string }[] = [
         {
@@ -34,6 +37,12 @@ export default function RankingTable() {
             width: '200px',
             text: '모스트 실험체'
         }]
+
+    const { data } = useQuery({
+        queryKey: ['ranking', '3', '21'],
+        queryFn: getRankingTop
+    })
+    console.log({ data });
     return (
         <>
             <table className={styles.rankingTable}>
@@ -49,11 +58,9 @@ export default function RankingTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    <RankingRow></RankingRow>
-                    <RankingRow></RankingRow>
-                    <RankingRow></RankingRow>
-                    <RankingRow></RankingRow>
-                    <RankingRow></RankingRow>
+                    {data?.topRanks?.slice(0, 5).map((obj, i) => {
+                        return (<RankingRow data={obj} key={i}></RankingRow>)
+                    })}
                 </tbody>
             </table>
             <Link className={styles.leaderBoard} href={'/er/leaderboard'}>

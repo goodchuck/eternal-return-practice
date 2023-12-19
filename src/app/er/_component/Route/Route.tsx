@@ -25,7 +25,7 @@ export default function Route({ data, chaData, weaponData }: Props) {
         .find((obj: any) => obj.code === row['characterCode'])
     const weaponType = weaponData.data[row['weaponType']];
     const weaponCodes = JSON.parse(row['weaponCodes']);
-    console.log({ data, name, weaponType })
+    // console.log({ data, name, weaponType })
 
 
     return (

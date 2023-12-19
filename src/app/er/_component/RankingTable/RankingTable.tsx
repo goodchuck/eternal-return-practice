@@ -4,6 +4,7 @@ import RankingRow from "../RankingRow/RankingRow"
 import styles from "./rankingTable.module.css"
 import Link from "next/link"
 import { getRankingTop } from "@/api/ranking/api"
+import { getMetaType } from "@/api/root"
 export default function RankingTable() {
     const thead: { width?: string, className?: string, text: string }[] = [
         {
@@ -42,6 +43,11 @@ export default function RankingTable() {
         queryKey: ['ranking', '3', '21'],
         queryFn: getRankingTop
     })
+
+    const { data: chaData } = useQuery({
+        queryKey: ['main', 'Character'],
+        queryFn: getMetaType
+    })
     console.log({ data });
     return (
         <>
@@ -58,8 +64,8 @@ export default function RankingTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    {data?.topRanks?.slice(0, 5).map((obj, i) => {
-                        return (<RankingRow data={obj} key={i}></RankingRow>)
+                    {chaData && data?.topRanks?.slice(0, 5).map((obj, i) => {
+                        return (<RankingRow data={obj} chaData={chaData} key={i}></RankingRow>)
                     })}
                 </tbody>
             </table>

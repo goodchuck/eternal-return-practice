@@ -1,0 +1,21 @@
+.main-section-formWrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    align-items: center;
+    max-width: 527px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.main-section-formWrapper > input {
+    font-size: 14px;
+    padding-right: 16px;
+    width: 100%;
+}
+
+.main-section-formWrapper > button {
+    display: flex;
+}

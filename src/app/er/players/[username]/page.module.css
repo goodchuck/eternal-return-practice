@@ -1,0 +1,399 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.ad-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    height: 284px;
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    background: url("//cdn.dak.gg/er/images/bg/bg-top.jpg") center center /
+        cover;
+    padding: 22px 8px 12px;
+    row-gap: 12px;
+}
+
+.section-container > .content {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.section-container > .content > .profile-image-wrapper {
+    width: 112px;
+    height: 90px;
+}
+
+.section-container > .content > .profile-image-wrapper > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-container > .content > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container > .content > div > .top {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.section-container > .content > div > .top > h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.section-container > .content > div > .top > span {
+    padding: 3px 7px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.middle {
+    display: flex;
+    gap: 4px;
+    word-break: keep-all;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.cu-button {
+    height: 36px;
+    padding: 12px;
+    background: rgb(17, 178, 136);
+    border-radius: 4px;
+}
+.middle > a {
+    display: block;
+    transition: opacity 0.2s ease-in-out 0s;
+    text-align: center;
+}
+
+.middle > .card-link {
+    position: relative;
+    display: flex;
+    border-radius: 4px;
+    background-image: linear-gradient(
+        to right,
+        rgb(220, 186, 65) 10%,
+        rgb(63, 185, 253) 60%,
+        rgb(174, 19, 248) 100%
+    );
+    background-clip: border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+}
+
+.middle > .card-link > .inner {
+    flex: 1 1 0%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    background-color: rgb(27, 27, 30);
+}
+
+.middle > .card-link > .inner > .link-text {
+    display: none;
+    white-space: nowrap;
+}
+
+.middle > .card-link > .inner > .link-text-short {
+    display: block;
+}
+
+.middle > .bookmark-button {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.content > div > p {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(214, 214, 214);
+}
+
+.filter {
+    width: 100%;
+}
+
+.details {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    flex: 1 1 0%;
+}
+
+.summary {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0px 11px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.summary > div {
+    flex: 1 1 0%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+}
+
+.summary > div > div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.summary > div > div > img {
+    width: 18px;
+    height: 18px;
+}
+
+.summary > div > div > div {
+    flex: 1 1 0%;
+}
+
+.section-nav {
+    display: flex;
+    padding: 0px 8px;
+    background: rgb(54, 57, 68);
+}
+
+.section-nav > a {
+    padding: 15px 16px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.section-nav > a.active {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tab > nav > ul {
+    display: grid;
+    border: 1px solid rgb(240, 240, 240);
+    background: rgb(255, 255, 255);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tab > nav > ul > li {
+    text-align: center;
+    border-right: 1px solid rgb(240, 240, 240);
+}
+
+.tab > nav > ul > li.active {
+    background: rgb(224, 149, 0);
+}
+
+.tab > nav > ul > li.active > a {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.tab > nav > ul > li > a {
+    display: block;
+    padding: 17px 0px;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 12px;
+}
+
+.value-container > .left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+}
+
+.value-container > .right {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+@media screen and (min-width: 577px) {
+    .container-section {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container-section {
+        max-width: 720px;
+    }
+
+    .section-container {
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0px;
+    }
+
+    .section-container > .content {
+        column-gap: 16px;
+    }
+
+    .section-container > .content > .profile-image-wrapper {
+        width: 222px;
+        height: 176px;
+    }
+
+    .section-container > .content > div > .top {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .section-container > .content > div > .top > h3 {
+        order: 2;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .section-container > .content > div > .top > span {
+        order: 1;
+    }
+
+    .cu-button {
+        height: 40px;
+    }
+    .middle > .card-link > .inner {
+        height: 36px;
+    }
+
+    .middle > .bookmark-button {
+        width: 40px;
+        height: 40px;
+    }
+    .filter {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 190px;
+    }
+
+    .tab > nav > ul {
+        display: flex;
+    }
+
+    .tab > nav > ul > li {
+        border-right: 1px solid rgb(240, 240, 240);
+        border-bottom: none;
+    }
+
+    .tab > nav > ul > li > a {
+        padding: 17px 40px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .ad-top {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        --tw-bg-opacity: 1;
+        background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+        --tw-border-opacity: 1;
+        border-color: rgb(230 230 230 / var(--tw-border-opacity));
+        border-width: 1px;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .container-section {
+        max-width: 960px;
+    }
+
+    .middle > .card-link > .inner > .link-text {
+        display: block;
+    }
+
+    .middle > .card-link > .inner > .link-text-short {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .container-section {
+        max-width: 1080px;
+    }
+
+    .tab {
+        display: none;
+    }
+    .value-container {
+        flex-direction: row;
+    }
+
+    .value-container > .left {
+        width: 352px;
+    }
+}

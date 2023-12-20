@@ -19,13 +19,13 @@ type Props = {
 }
 
 export default function Route({ data, chaData, weaponData }: Props) {
+    console.log({ data, chaData, weaponData })
     const row = data['recommendWeaponRoute'];
 
     const { name } = chaData?.data
         .find((obj: any) => obj.code === row['characterCode'])
     const weaponType = weaponData.data[row['weaponType']];
     const weaponCodes = JSON.parse(row['weaponCodes']);
-    // console.log({ data, name, weaponType })
 
 
     return (
@@ -35,7 +35,7 @@ export default function Route({ data, chaData, weaponData }: Props) {
                     <div className={styles.chaProfile}>
                         <Image src={`https://cdn.dak.gg/assets/er/game-assets/1.10.0/CharProfile_${name}_S000.png`} alt="셀린" width={36} height={36}></Image>
                     </div>
-                    <Image src={`https://cdn.dak.gg/assets/er/game-assets/1.10.0/Ico_Ability_${weaponType.type}.png`} alt="무기" width={16} height={16} className={styles.weaponProfile}></Image>
+                    <Image src={`https://cdn.dak.gg/assets/er/game-assets/1.10.0/Ico_Ability_${weaponType?.type}.png`} alt="무기" width={16} height={16} className={styles.weaponProfile}></Image>
                 </div>
                 {name}
                 <ul className={styles.chaRoutes}>

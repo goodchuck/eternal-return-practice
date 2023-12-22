@@ -1,7 +1,36 @@
+"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
-export default async function Page() {
+import LeftSection from './_component/LeftSection/LeftSection'
+import AllSpecimenTable from './_component/LeftSection/AllSpecimenTable/AllSpecimenTable'
+import { useQuery } from '@tanstack/react-query'
+import { getUserNum, getUserStats } from '@/api/user/api'
+
+type Props = {
+    params: { username: string }
+}
+export default function Page({ params }: Props) {
+    const { username } = params;
+    const seasonId = "21"
+    const { data: nicknameRes, isLoading, isError } = useQuery({
+        queryKey: ['user', 'nickname', username],
+        queryFn: getUserNum
+    })
+    if (isLoading) {
+        return (<div>nick대기</div>)
+    }
+    const userNum = nicknameRes.user.userNum.toString();
+    const { data: statsRes, isLoading: statsLoading, isError: statsError } = useQuery({
+        queryKey: ['user', 'stats', seasonId, userNum],
+        queryFn: getUserStats
+    })
+
+    if (statsLoading) {
+        return (<div>대기중</div>)
+    }
+    let stats = statsRes.userStats[0];
+    console.log({ statsRes, nicknameRes, userNum });
     return (
         <main className={`${styles.container} ${styles['container-section']}`}>
             <div id='content-container'></div>
@@ -83,7 +112,10 @@ export default async function Page() {
                 </nav>
             </div>
             <div className={styles['value-container']}>
-                <div className={styles['left']}></div>
+                <div className={styles['left']}>
+                    <LeftSection></LeftSection>
+                    <AllSpecimenTable></AllSpecimenTable>
+                </div>
                 <div className={styles['right']}></div>
             </div>
         </main>

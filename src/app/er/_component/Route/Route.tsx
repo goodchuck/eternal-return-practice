@@ -39,7 +39,7 @@ export default function Route({ data, chaData, weaponData }: Props) {
                 </div>
                 {name}
                 <ul className={styles.chaRoutes}>
-                    {weaponCodes?.map((obj, i) => {
+                    {weaponCodes?.map((obj: any, i: number) => {
                         return (<li key={i}>
                             <div className={styles.routeBox}>
                                 <Image src={`https://cdn.dak.gg/assets/er/game-assets/1.10.0/ItemIcon_${obj}.png`} alt="소이탄" width={24} height={24}></Image>

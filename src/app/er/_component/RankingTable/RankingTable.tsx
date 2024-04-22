@@ -64,7 +64,7 @@ export default function RankingTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    {chaData && data?.topRanks?.slice(0, 5).map((obj, i) => {
+                    {chaData && data?.topRanks?.slice(0, 5).map((obj: any, i: number) => {
                         return (<RankingRow data={obj} chaData={chaData} key={i}></RankingRow>)
                     })}
                 </tbody>

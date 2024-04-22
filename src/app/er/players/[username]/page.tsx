@@ -4,15 +4,21 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import LeftSection from './_component/LeftSection/LeftSection'
 import AllSpecimenTable from './_component/LeftSection/AllSpecimenTable/AllSpecimenTable'
-import { useQuery } from '@tanstack/react-query'
+import { useQueries, useQuery } from '@tanstack/react-query'
 import { getUserNum, getUserStats } from '@/api/user/api'
 
 type Props = {
     params: { username: string }
 }
+/**
+ * 해당부분때문에 아직 build가 되지않는다 나중에 vercel 배포할때 이부분 수정해야한다.
+ * @param param0 
+ * @returns 
+ */
 export default function Page({ params }: Props) {
     const { username } = params;
     const seasonId = "21"
+
     const { data: nicknameRes, isLoading, isError } = useQuery({
         queryKey: ['user', 'nickname', username],
         queryFn: getUserNum

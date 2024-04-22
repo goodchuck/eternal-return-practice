@@ -29,7 +29,7 @@ export default async function Page() {
                         <SearchForm></SearchForm>
                         <p className={styles['p-info']}>
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="#ffffff" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216 192V224h24 48 24v24 88h8 24v48H296 216 192V336h24zm72-144H224V128h64v64z"></path></svg>
-                            "쉼표(,)로 구분하여 여러 플레이어 닉네임을 입력하면 멀티서치로 이동합니다."
+                            &quot;쉼표(,)로 구분하여 여러 플레이어 닉네임을 입력하면 멀티서치로 이동합니다.&quot;
                         </p>
                     </section>
                 </main>
